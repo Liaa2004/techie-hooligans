@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+<body>
+    
+    {% if error%}
+    <p><strong>{{error}}</strong></p>
+    {% endif%}
+
+    <form action="/account_created" method="POST">
+        <table>
+            <tr>
+                <td>Username : </td>
+                <td><input name="username" type="text"> </td>
+            </tr>
+            <tr>
+                <td>
+                    Name :
+                </td>
+                <td>
+                    <input name="name" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>Password : </td>
+                <td> <input name="password" type="password"> </td>
+            </tr>
+            <tr>
+                <td>
+                    Confirm Password : 
+                </td>
+                <td>
+                    <input name="password1" type="password">
+                </td>
+            </tr>
+        </table>
+        <p>
+            You are :
+            <br>
+            <input type="radio" name="accountType" value="buyer">
+                <label for = "accountType">Buyer</label>
+            <br>
+            <input type="radio" name="accountType" value="seller">
+                <label for = "accountType">Seller</label>
+            <br>
+            <input type="submit" value="PROCEED">
+        </p>
+    </form>
+</body>
+</html>
